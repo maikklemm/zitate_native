@@ -27,11 +27,30 @@ export default class App extends Component {
 
   _addQuote = (text, author) => {
     let {quotes} = this.state;
-    if(text !== null && author !== nul)
+    if(text !== null && author !== null)
     quotes.push({text, author});
     this.setState({showNewQuoteScreen: false, quotes});
   };
+};
 
+const styles = StyleSheet.create{
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }, 
+    nextButton: {
+      position: 'absolute', 
+      bottom: 0
+    },
+    newButton: {
+      position: 'absolute',
+      right: 0,
+      top: 30
+    }
+  }
+  
         //Dartstellung im UI, Komponente erscheint im UI - init.Zustand
         //Zustand änder sich - state-  ==> this.setState
   render() {
@@ -40,7 +59,7 @@ export default class App extends Component {
     let nextIndex = index + 1;
     if(nextIndex === quotes.length) nextIndex = 0;
   return (
-        //JSX
+    //JSX
     <View style={styles.container}>
       <View style={styles.container}>
         <Button title="NEU" onPress={() => this.setState({ showNewQuoteScreen: true })} />
@@ -59,29 +78,4 @@ export default class App extends Component {
       />
       </View>
     </View>
-    }
-  
-  
-
-
-
-
-      //Styles für Aussehen und Layout
-const styles = StyleSheet.create({
-  container {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }, 
-  nextButton: {
-    position: 'absolute', 
-    bottom: 0
-  },
-  newButton: {
-    position: 'absolute',
-    right: 0,
-    top: 30
   }
-
-});
