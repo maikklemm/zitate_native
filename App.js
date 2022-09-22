@@ -33,7 +33,7 @@ export default class App extends Component {
   };
 };
 
-const styles = StyleSheet.create{
+const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
@@ -49,10 +49,10 @@ const styles = StyleSheet.create{
       right: 0,
       top: 30
     }
-  }
+  });
   
         //Dartstellung im UI, Komponente erscheint im UI - init.Zustand
-        //Zustand änder sich - state-  ==> this.setState
+        //Zustand ändert sich - state-  ==> this.setState
   render() {
     let { index, quotes } = this.state;
     const quote = quotes[index];   //quote.text und quote.author erlauben Zugriff a.d.jew.Array
