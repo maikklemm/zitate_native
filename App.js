@@ -4,6 +4,24 @@ import { Button, StyleSheet, View } from 'react-native';
 import Quote from './js/components/Quote';
 import NewQuote from './js/components/NewQuote';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 100
+  }, 
+  nextButton: {
+    position: 'relativ', 
+    bottom: 0
+  },
+  newButton: {
+    position: 'absolute',
+    right: 0,
+    top: 30
+  }
+});
 
 const data = [
   {
@@ -31,25 +49,7 @@ export default class App extends Component {
     quotes.push({text, author});
     this.setState({showNewQuoteScreen: false, quotes});
   };
-};
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }, 
-    nextButton: {
-      position: 'absolute', 
-      bottom: 0
-    },
-    newButton: {
-      position: 'absolute',
-      right: 0,
-      top: 30
-    }
-  });
   
         //Dartstellung im UI, Komponente erscheint im UI - init.Zustand
         //Zustand ändert sich - state-  ==> this.setState
@@ -78,4 +78,5 @@ const styles = StyleSheet.create({
       />
       </View>
     </View>
-  }
+  )}
+};

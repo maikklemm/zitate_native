@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default function Quote(props) {
@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
     container: {
         borderWidth: 1,
         paddingHorizontal: 20
-    }
+    },
     text: {
         fontSize: 36, 
         fontStyle: 'italc',
         margin: 10,
         textAlign: 'center'    //wird auf Android auf left angezeigt
-    }
+    },
     author: {
         fontSize: 20,
         textAlign: 'right'

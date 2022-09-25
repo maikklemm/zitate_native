@@ -52,9 +52,9 @@ const styles = StyleSheet.create({
         borderColor: 'deepskyblue', 
         borderRadius: 4,
         width: '80%',
-        marginBottom: 20,
+        marginBottom: 100,
         fontSize: 20,
-        padding: 10,
+        padding: 15,
         height: 50,
 
     }
